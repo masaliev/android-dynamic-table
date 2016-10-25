@@ -96,6 +96,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>{
         int pos = items.indexOf(item);
         items.remove(pos);
         notifyItemRemoved(pos);
+        notifyItemRangeChanged(pos, items.size());
     }
 
     public ArrayList<StoreItems> getItems(){
